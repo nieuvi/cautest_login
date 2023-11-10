@@ -4,7 +4,7 @@
   "description": "test automation",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js -p test-runner"
+    "test": "npx cucumber-js -p test_runner"
   },
   "author": "",
   "license": "ISC",

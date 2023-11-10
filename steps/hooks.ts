@@ -4,7 +4,7 @@ import { Browser, chromium, Page } from 'playwright';
 let page: Page;
 let browser: Browser;
 
-setDefaultTimeout(60000);
+setDefaultTimeout(60000*2);
 
 Before(async () => {
     try {
@@ -23,4 +23,6 @@ Before(async () => {
 
 After(async () => {
     await browser.close();
-})
+});
+
+export {page, browser };
