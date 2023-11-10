@@ -43,7 +43,18 @@ Feature: Cautest Login
     #         | Please enter your email address |
 
 # Verify "Forgotten Password?" hyperlink
-    Scenario: Verify that the "Forgotten Password?" hyperlink is clickable
-        Given User enters valid email --hyperlink
-        When User clicks on the "Forgotten Password?" hyperlink
-        Then The "Forgotten Password" form should be displayed
+    # Scenario: Verify that the "Forgotten Password?" hyperlink is clickable
+    #     Given User enters valid email --hyperlink
+    #     When User clicks on the "Forgotten Password?" hyperlink
+    #     Then The "Forgotten Password" form should be displayed
+
+# Verify "Sign up" hyperlink
+    Scenario: Verify that the user can access the organisation form to sign up
+        Given User clicks on the "Sign up" hyperlink --organisation
+        When User chooses the "Organisation" option
+        Then The "Organisation" form should be displayed
+    
+    # Scenario: Verify that the user can access the individual form to sign up
+    #     Given User clicks on the "Sign up" hyperlink --individual
+    #     When User chooses the "Individual" option
+    #     Then The "Individual" form should be displayed

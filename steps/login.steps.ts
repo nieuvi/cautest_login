@@ -108,3 +108,34 @@ Then('The "Forgotten Password" form should be displayed', async function () {
     expect(await cautestLoginPage.verifyForgotlink());
 });
 
+//Verify that the user can access the organisation form to sign up
+Given('User clicks on the "Sign up" hyperlink --organisation', async function () {
+    cautestLoginPage = new CautestLoginPage();
+    await cautestLoginPage.fillLoginInfo('hoanognadmin@yopmail.com', '');
+    await cautestLoginPage.clickSignupHyperlink();
+})
+
+When('User chooses the "Organisation" option', async function() {
+    await cautestLoginPage.selectSignup('Organisation');
+})
+
+Then('The "Organisation" form should be displayed', async function() {
+    expect (await cautestLoginPage.verifySignUpHyperlink('Organisation'));
+})
+
+//Verify that the user can access the individual form to sign up
+Given('User clicks on the "Sign up" hyperlink --individual', async function () {
+    cautestLoginPage = new CautestLoginPage();
+    await cautestLoginPage.fillLoginInfo('hoanognadmin@yopmail.com', '');
+    await cautestLoginPage.clickSignupHyperlink();
+})
+
+When('User chooses the "Individual" option', async function() {
+    await cautestLoginPage.selectSignup('Individual');
+})
+
+Then('The "Individual" form should be displayed', async function() {
+    expect (await cautestLoginPage.verifySignUpHyperlink('Individual'));
+})
+
+

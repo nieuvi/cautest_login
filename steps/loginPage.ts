@@ -12,6 +12,11 @@ export class CautestLoginPage {
         errorValidation: "//ul[@class='list-unstyled']//li",
         forgotPassHyperlink: "//a[contains(@class,'forgotten-password')]//small",
         forgotPassForm: "//form[@class='form-horizontal']",
+        signupHyperlink: "//a[@id='signUpMenuButton']//small",
+        Organisation: "//a[@class='dropdown-item']//small[text()='Organisation']",
+        OrganisationFrm: "//div[@class='gp-body givenow-pricing-plan']",
+        Individual: "//a[@class='dropdown-item']//small[text()='Individual']",
+        IndividualFrm: "//div[@class='card-header alert-teal']"
     }
 
     async fillLoginInfo(UN: any, PW: any) {
@@ -50,5 +55,35 @@ export class CautestLoginPage {
 
     async verifyForgotlink() {
         await expect(page.locator(this.Elements.forgotPassForm)).toBeVisible();
+    }
+
+    async clickSignupHyperlink() {
+        await page.click(this.Elements.signupHyperlink);
+    }
+
+    async selectSignup(type: string) {
+        let signupType = "";
+        switch (type) {
+            case 'Organisation':
+                signupType = this.Elements.Organisation;
+            break;
+            case 'Individual':
+                signupType = this.Elements.Individual;
+            break;
+        }
+        await page.click(signupType);
+    }
+
+    async verifySignUpHyperlink(type: string) {
+        let actualFrm = "";
+        switch (type) {
+            case 'Organisation':
+                actualFrm = this.Elements.OrganisationFrm;
+            break;
+            case 'Individual':
+                actualFrm = this.Elements.IndividualFrm;
+            break;
+        }
+        await expect(page.locator(actualFrm)).toBeVisible();
     }
 }
