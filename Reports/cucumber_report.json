@@ -1,0 +1,79 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "cautest-login;verify-that-the-user-can-access-the-organisation-form-to-sign-up",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "Verify that the user can access the organisation form to sign up",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10961272400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 53,
+            "name": "User clicks on the \"Sign up\" hyperlink --organisation",
+            "match": {
+              "location": "steps\\login.steps.ts:112"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 509588400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 54,
+            "name": "User chooses the \"Organisation\" option",
+            "match": {
+              "location": "steps\\login.steps.ts:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 756254400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "The \"Organisation\" form should be displayed",
+            "match": {
+              "location": "steps\\login.steps.ts:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 190132200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 800880500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "cautest-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Cautest Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
