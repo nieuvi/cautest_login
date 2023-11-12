@@ -43,10 +43,10 @@ Feature: Cautest Login
     #         | Please enter your email address |
 
 # Verify "Forgotten Password?" hyperlink
-    # Scenario: Verify that the "Forgotten Password?" hyperlink is clickable
-    #     Given User enters valid email --hyperlink
-    #     When User clicks on the "Forgotten Password?" hyperlink
-    #     Then The "Forgotten Password" form should be displayed
+    Scenario: Verify that the "Forgotten Password?" hyperlink is clickable
+        Given User enters valid email --hyperlink
+        When User clicks on the "Forgotten Password?" hyperlink
+        Then The "Forgotten Password" form should be displayed
 
 # Verify "Sign up" hyperlink
     Scenario: Verify that the user can access the organisation form to sign up

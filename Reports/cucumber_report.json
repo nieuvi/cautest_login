@@ -4,19 +4,61 @@
     "elements": [
       {
         "description": "",
+        "id": "cautest-login;verify-that-the-\"forgotten-password?\"-hyperlink-is-clickable",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "Verify that the \"Forgotten Password?\" hyperlink is clickable",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 47,
+            "name": "User enters valid email --hyperlink",
+            "match": {
+              "location": "steps\\login.steps.ts:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 247913100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "User clicks on the \"Forgotten Password?\" hyperlink",
+            "match": {
+              "location": "steps\\login.steps.ts:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1726300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "The \"Forgotten Password\" form should be displayed",
+            "match": {
+              "location": "steps\\login.steps.ts:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 923169200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "cautest-login;verify-that-the-user-can-access-the-organisation-form-to-sign-up",
         "keyword": "Scenario",
         "line": 52,
         "name": "Verify that the user can access the organisation form to sign up",
         "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 10961272400
-            }
-          },
           {
             "arguments": [],
             "keyword": "Given ",
@@ -27,7 +69,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 509588400
+              "duration": 7441502100
             }
           },
           {
@@ -40,7 +82,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 756254400
+              "duration": 690794199
             }
           },
           {
@@ -53,15 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 190132200
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 800880500
+              "duration": 133293300
             }
           }
         ],
