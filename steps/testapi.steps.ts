@@ -9,7 +9,7 @@ Given('The API server is running', function () {
     apiPage = new APIPage();
 });
 
-When('I send a GET request to that API server', function() {
+When('I send a GET request to that API server', function () {
     apiPage.getRequest('');
 });
 
@@ -63,12 +63,12 @@ Then('I receive a response body having a added product with id {int} and contain
 //Update a product
 Given('The API server is running --update', function () {
     apiPage = new APIPage();
-  });
+});
 
 When('I send a PUT request to {string} endpoint --update', function (string) {
     apiPage.putRequest(string);
-  });
+});
 
-  Then('I receive a response body having a updated product with id {int} and contains: --update', async function (int, table: DataTable) {    
+Then('I receive a response body having a updated product with id {int} and contains: --update', async function (int, table: DataTable) {
     expect(await apiPage.containBodyput("/7", int, table));
-  });
+});
