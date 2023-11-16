@@ -15,10 +15,10 @@ Feature: Test API for cart
     #     When I send a GET request to "?limit=5" endpoint --limit carts
     #     Then I receive a response with 5 carts --limit carts
 
-    # Scenario: Sort results descrease
-    #     Given The API server is running --sort carts
-    #     When I send a GET request to "?sort=desc" endpoint --sort carts
-    #     Then I receive a response body with id 7 at first --sort carts
+    Scenario: Sort results descrease
+        Given The API server is running --sort carts
+        When I send a GET request to "?sort=desc" endpoint --sort carts
+        Then I receive a response body with id 7 at first --sort carts
 
     # Scenario: Get carts in a date range
     #     Given The API server is running --date range
@@ -36,8 +36,8 @@ Feature: Test API for cart
     #     Then I receive a 200 response --add cart
     #     And I receive a new cart in response body --add cart
         
-    Scenario: Update a cart
-        Given The API server is running --update cart
-        When I send a PUT request to "/7" endpoint --update cart
-        Then I receive a 200 response --update cart
-        And I receive a updated cart --update cart
+    # Scenario: Update a cart
+    #     Given The API server is running --update cart
+    #     When I send a PUT request to "/7" endpoint --update cart
+    #     Then I receive a 200 response --update cart
+    #     And I receive a updated cart --update cart
